@@ -12,9 +12,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  profile,
 }: Readonly<{
   children: React.ReactNode;
+  profile: React.ReactNode
 }>) {
+  // const isAdmin = true  //parallel routing
   return (
     <html lang="en">
       <body
@@ -29,7 +32,10 @@ export default function RootLayout({
               </li>
             </ul>
           </nav>
-          {children}</body>
+
+          {children}
+          {/* {isAdmin && profile}   //Parellel Routing  */}
+        </body>
     </html>
   );
 }
