@@ -4,5 +4,5 @@ import * as schema from "@/server/shcema"
 
 
 const sql = neon(process.env.POSTGRESS_URL as string);
-export const db = drizzle(sql)
+export const db = drizzle(sql, {schema, logger: true})
 
