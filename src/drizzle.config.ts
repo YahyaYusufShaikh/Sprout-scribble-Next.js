@@ -1,5 +1,5 @@
 import 'dotenv/config';
-import type { Config } from 'tailwindcss';
+import type { Config } from 'drizzle-kit';
 
 export default{
     schema: './server/schema.ts',
@@ -8,5 +8,4 @@ export default{
     dbCredentials: {
         connectionString: process.env.POSTGRESS_URL!,
     },
-    content: []
 }satisfies Config;
