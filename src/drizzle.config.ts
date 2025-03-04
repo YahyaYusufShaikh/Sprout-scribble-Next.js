@@ -1,11 +1,13 @@
 import 'dotenv/config';
-import type { Config } from 'drizzle-kit';
+import type { Config } from 'tailwindcss';
 
-export default{
+export default  {
     schema: './server/schema.ts',
-    out: './server/drizzle',
-    driver: "pg",
+    out: './server/migrations',
+    dialect: "postgres",
+    driver: 'pg',
     dbCredentials: {
         connectionString: process.env.POSTGRESS_URL!,
     },
-}satisfies Config;
+    content: []
+} satisfies Config;
