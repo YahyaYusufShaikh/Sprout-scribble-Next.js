@@ -7,9 +7,10 @@ dotenv.config({
 })
 
 export default  {
-    schema: "./server/schema.ts",
-    out: './server/migrations',
+    schema: "./src/server/shcema.ts",
+    out: './src/server/migrations',
     dialect: "postgresql", // Replace with the correct dialect for your database
+    driver:"pglite",
     dbCredentials: {
         url: process.env.POSTGRESS_URL!, // Note: connectionString is used instead of url
     },
